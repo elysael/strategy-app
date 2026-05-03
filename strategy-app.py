@@ -147,6 +147,12 @@ with col2:
             st.rerun()
 
 with col3:
-    if st.button("Export CSV"):
-        save_to_csv()
-        st.success("Saved learning_labels.csv") 
+    if len(st.session_state.results) > 0:
+        df_out = pd.DataFrame(st.session_state.results)
+
+        st.download_button(
+            "Download CSV",
+            data=df_out.to_csv(index=False),
+            file_name="learning_labels.csv",
+            mime="text/csv"
+        )
