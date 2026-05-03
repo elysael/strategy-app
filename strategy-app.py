@@ -48,7 +48,7 @@ def save_current():
 
 def save_to_csv():
     out = pd.DataFrame(st.session_state.results)
-    file = f"learning_labels_{participant_id}.csv"
+    file = f"learning_labels_{current_pid()}.csv"
 
     if os.path.exists(file):
         old = pd.read_csv(file)
