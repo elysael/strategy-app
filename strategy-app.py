@@ -80,7 +80,7 @@ st.session_state.phenotype = st.radio(
 fig = go.Figure()
 
 fig.add_trace(go.Scatter(
-    x = pdat["rel_trial"]
+    x = pdat["rel_trial"],
     y=pdat["aimdeviation_deg"],
     mode="lines+markers",
     name="trajectory"
