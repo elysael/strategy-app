@@ -12,6 +12,17 @@ ROTATION_START = 113
 
 df["rel_trial"] = df["cutrial_no"] - ROTATION_START
 
+labeler_id = st.text_input("Enter your name / ID")
+
+#label id
+if labeler_id:
+    seed = abs(hash(labeler_id)) % (2**32)
+    rng = pd.Series(participants).sample(frac=1, random_state=seed)
+    participants = rng.values
+else:
+    st.warning("Please enter your name to begin labeling.")
+    st.stop()
+
 # -----------------------------
 # Session state setup
 # -----------------------------
@@ -43,7 +54,8 @@ def save_current():
         "participant_id": current_pid(),
         "learning_start": start,
         "learning_end": end,
-        "phenotype": st.session_state.phenotype
+        "phenotype": st.session_state.phenotype,
+        "labeler_id": labeler_id   
     })
 
 def save_to_csv():
@@ -153,6 +165,6 @@ with col3:
         st.download_button(
             "Download CSV",
             data=df_out.to_csv(index=False),
-            file_name="learning_labels.csv",
+            file_name=f"learning_labels_{labeler_id}.csv",  
             mime="text/csv"
         )
