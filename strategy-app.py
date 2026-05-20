@@ -55,7 +55,8 @@ def save_current():
         "learning_start": start,
         "learning_end": end,
         "phenotype": st.session_state.phenotype,
-        "labeler_id": labeler_id   
+        "labeler_id": labeler_id,
+        "Clear": clear_checked
     })
 
 def save_to_csv():
@@ -169,3 +170,4 @@ with col3:
             file_name=f"learning_labels_{labeler_id}.csv",  
             mime="text/csv"
         )
+
