@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import os
+import tkinter as tk
 
 # -----------------------------
 # Load data
@@ -85,6 +86,7 @@ st.session_state.phenotype = st.radio(
     "Phenotype",
     ["gradual", "stepwise", "exploratory"]
 )
+clear_checked = st.checkbox("Clear?")
 
 # -----------------------------
 # Plotly figure
