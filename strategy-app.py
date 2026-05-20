@@ -55,8 +55,8 @@ def save_current():
         "learning_start": start,
         "learning_end": end,
         "phenotype": st.session_state.phenotype,
-        "labeler_id": labeler_id,
-        "Clear": clear_checked
+        "Clear": clear_checked,
+        "labeler_id": labeler_id
     })
 
 def save_to_csv():
