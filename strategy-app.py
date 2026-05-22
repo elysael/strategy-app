@@ -191,23 +191,24 @@ with col1:
 # next participant
 with col2:
 
-    if len(st.session_state.clicks) == 0:
+    # allow advancing even without clicks
+    if st.button("Next participant"):
 
-        if st.button("Next participant"):
-
+        # only save if 2 clicks exist
+        if len(st.session_state.clicks) == 2:
             save_current()
 
-            reset_clicks()
+        reset_clicks()
 
-            # final participant
-            if st.session_state.idx >= len(participants) - 1:
+        # final participant
+        if st.session_state.idx >= len(participants) - 1:
 
-                st.session_state.finished = True
+            st.session_state.finished = True
 
-            else:
-                st.session_state.idx += 1
+        else:
+            st.session_state.idx += 1
 
-            st.rerun()
+        st.rerun()
 
 # manual download anytime
 with col3:
