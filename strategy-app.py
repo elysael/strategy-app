@@ -9,7 +9,18 @@ import os
 df = pd.read_csv("strategy_only_participants.csv")
 
 # convert to plain Python list (avoids Arrow indexing issues)
-participants = df["participant_id"].unique().tolist()
+#participants = df["participant_id"].unique().tolist()
+participants = [
+    "d10bdf",
+    "03fd31",
+    "9b1b25",
+    "96634a",
+    "feb484",
+    "13cb04",
+    "422c52",
+    "98abcb",
+    "85592d"
+]
 
 ROTATION_START = 113
 
