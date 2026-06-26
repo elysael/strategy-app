@@ -1,6 +1,8 @@
-# 🎈 Blank app template
+# 🎈 Strategy Labeling App
 
-A simple Streamlit app template for you to modify!
+This app presents participant explicit learning timecourses. Here, individuals can label strategy timepoints (ie., start of aiming and strategy stabilization). Individuals can also label timecourses as: 1) erratic, 2) stepwise, or 3) gradual. 
+
+
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
 
