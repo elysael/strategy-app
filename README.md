@@ -5,9 +5,7 @@ This app presents participant explicit learning timecourses. Here, individuals c
 <img width="489" height="161" alt="image" src="https://github.com/user-attachments/assets/3a89dd84-caa6-4f23-b5d8-2ba5726771a0" />
 
 
-
-
-[![Open in Streamlit]https://strategy-app-jzzbputpzgfexqxqqfdtxj.streamlit.app/
+**Try it out!**: https://strategy-app-jzzbputpzgfexqxqqfdtxj.streamlit.app
 
 
 ### How to run it on your own machine
